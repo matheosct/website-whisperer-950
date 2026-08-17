@@ -177,3 +177,79 @@
     display: none;
   }
 }
+
+@utility logo-animate {
+  & .logo-char {
+    animation: logo-char-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  & .logo-underline {
+    animation: logo-underline-in 0.7s 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  & .logo-mark-fill {
+    transform: scale(0);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  & .logo-mark-initials {
+    transition: color 0.4s ease;
+  }
+
+  &:hover .logo-mark-fill {
+    transform: scale(1);
+  }
+
+  &:hover .logo-mark-initials {
+    color: var(--color-background);
+  }
+
+  &:hover .logo-underline {
+    animation: none;
+    transform: scaleX(2.4);
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+  }
+
+  &:hover .logo-char {
+    animation: logo-char-bounce 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+}
+
+@keyframes logo-char-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.45em) rotate(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+@keyframes logo-char-bounce {
+  0% {
+    transform: translateY(0);
+  }
+  45% {
+    transform: translateY(-0.14em);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes logo-underline-in {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-animate .logo-char,
+  .logo-animate .logo-underline {
+    animation: none !important;
+  }
+}
