@@ -1,10 +1,17 @@
 export type Skill = { name: string };
 
+export type ProjectBlock =
+  | { type: "text"; content: string }
+  | { type: "image"; src: string; alt: string; caption?: string };
+
 export type Project = {
   title: string;
   category: string;
   image: string;
   href?: string;
+  tags: string[];
+  summary: string;
+  blocks: ProjectBlock[];
 };
 
 export type TimelineEntry = {
