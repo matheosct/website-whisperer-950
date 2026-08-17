@@ -1,10 +1,12 @@
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-import { projects } from "@/lib/resume-data";
+import { ProjectDialog } from "@/components/resume/ProjectDialog";
+import { projects, type Project } from "@/lib/resume-data";
 
 export function ProjectsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   const scrollBy = (direction: 1 | -1) => {
     const track = trackRef.current;
