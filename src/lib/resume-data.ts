@@ -16,9 +16,9 @@ export type TimelineEntry = {
 
 export const profile = {
   name: "Matheus Costa",
-  role: "Designer Gráfico & de Produto",
+  role: "Product Designer · UX/UI",
   summary:
-    "Designer gráfico e de produto com atuação em UX/UI, infografia e comunicação visual institucional.",
+    "Product designer focado em UX/UI: pesquisa, arquitetura de informação, design systems e interfaces de produtos digitais.",
   location: "Rio de Janeiro, Brasil",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" as const },
@@ -28,8 +28,8 @@ export const profile = {
 };
 
 export const about = [
-  "Mais de 6 anos de experiência em design gráfico e de produto, atuando em projetos de saúde pública, educação, moda e governo. Trabalho na interseção entre estética e funcionalidade, com foco em clareza da informação.",
-  "Rotina baseada em pesquisa, prototipagem e refinamento, em colaboração com equipes multidisciplinares de pesquisa, desenvolvimento e gestão.",
+  "Mais de 6 anos projetando produtos digitais — web e mobile — em saúde pública, educação, governo e e-commerce. Atuo do problema à entrega: pesquisa com usuários, fluxos, wireframes, protótipos e interface final.",
+  "Trabalho orientado a evidências e a design systems escaláveis, em colaboração diária com pesquisa, engenharia e gestão de produto, acompanhando a implementação e a evolução das interfaces.",
 ];
 
 export const skills: Skill[] = [
@@ -41,26 +41,26 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "Brand Identity Design",
-    category: "Design Gráfico",
+    title: "Design System de Produto",
+    category: "UI · Design System",
     image:
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "App Interface Mobile",
-    category: "UI/UX Design",
+    title: "App Mobile de Saúde",
+    category: "UX/UI · Mobile",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Editorial Design Magazine",
-    category: "Layout",
+    title: "Pesquisa e Fluxos de Usuário",
+    category: "UX Research",
     image:
       "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Web Dashboard",
-    category: "Web Design",
+    title: "Dashboard de Dados",
+    category: "Product Design · Web",
     image:
       "https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800",
   },

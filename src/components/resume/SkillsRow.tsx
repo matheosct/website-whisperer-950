@@ -15,12 +15,11 @@ export function SkillsRow() {
       {skills.map((skill) => {
         const Icon = icons[skill.name] ?? Layers;
         return (
-          <li
-            key={skill.name}
-            className="flex items-center gap-2 rounded-full border border-border px-4 py-2 text-label font-bold tracking-wide text-foreground"
-          >
-            <Icon className="h-3.5 w-3.5 text-muted-foreground" />
-            {skill.name}
+          <li key={skill.name}>
+            <span className="group flex cursor-default items-center gap-2 rounded-full border border-border px-4 py-2 text-label font-bold tracking-wide text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-foreground hover:bg-foreground hover:text-background hover:shadow-lg">
+              <Icon className="h-3.5 w-3.5 text-muted-foreground transition-colors duration-300 group-hover:text-background" />
+              {skill.name}
+            </span>
           </li>
         );
       })}
