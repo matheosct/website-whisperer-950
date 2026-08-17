@@ -1,6 +1,8 @@
 import { profile } from "@/lib/resume-data";
 
-const [first, ...rest] = profile.name.split(" ");
+const parts = profile.name.split(" ");
+const first = parts[0] ?? "";
+const rest = parts.slice(1);
 const last = rest.join(" ");
 
 export function AnimatedLogo() {
