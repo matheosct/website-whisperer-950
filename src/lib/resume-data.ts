@@ -41,26 +41,26 @@ export const skills: Skill[] = [
 
 export const projects: Project[] = [
   {
-    title: "Brand Identity Design",
-    category: "Design Gráfico",
+    title: "Design System de Produto",
+    category: "UI · Design System",
     image:
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "App Interface Mobile",
-    category: "UI/UX Design",
+    title: "App Mobile de Saúde",
+    category: "UX/UI · Mobile",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Editorial Design Magazine",
-    category: "Layout",
+    title: "Pesquisa e Fluxos de Usuário",
+    category: "UX Research",
     image:
       "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800",
   },
   {
-    title: "Web Dashboard",
-    category: "Web Design",
+    title: "Dashboard de Dados",
+    category: "Product Design · Web",
     image:
       "https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800",
   },
