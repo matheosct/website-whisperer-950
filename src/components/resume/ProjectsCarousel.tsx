@@ -1,10 +1,12 @@
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
-import { projects } from "@/lib/resume-data";
+import { ProjectDialog } from "@/components/resume/ProjectDialog";
+import { projects, type Project } from "@/lib/resume-data";
 
 export function ProjectsCarousel() {
   const trackRef = useRef<HTMLDivElement>(null);
+  const [selected, setSelected] = useState<Project | null>(null);
 
   const scrollBy = (direction: 1 | -1) => {
     const track = trackRef.current;
@@ -45,24 +47,35 @@ export function ProjectsCarousel() {
             key={project.title}
             className="group w-[240px] shrink-0 snap-start sm:w-[280px]"
           >
-            <div className="relative overflow-hidden rounded-md border border-border">
-              <img
-                src={project.image}
-                alt={project.title}
-                loading="lazy"
-                className="h-[180px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <span className="absolute inset-0 flex items-center justify-center gap-1.5 bg-background/70 text-label font-bold tracking-wide text-foreground opacity-0 transition-opacity group-hover:opacity-100">
-                Ver projeto <ArrowUpRight className="h-3.5 w-3.5" />
-              </span>
-            </div>
-            <p className="mt-3 font-mono text-label tracking-[0.14em] uppercase text-muted-foreground">
-              {project.category}
-            </p>
-            <h3 className="mt-1 text-item font-semibold text-foreground">{project.title}</h3>
+            <button
+              type="button"
+              onClick={() => setSelected(project)}
+              aria-label={`Abrir detalhes do projeto ${project.title}`}
+              className="block w-full cursor-pointer text-left"
+            >
+              <div className="relative overflow-hidden rounded-md border border-border">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  className="h-[180px] w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <span className="absolute inset-0 flex items-center justify-center gap-1.5 bg-background/70 text-label font-bold tracking-wide text-foreground opacity-0 transition-opacity group-hover:opacity-100">
+                  Ver projeto <ArrowUpRight className="h-3.5 w-3.5" />
+                </span>
+              </div>
+              <p className="mt-3 font-mono text-label tracking-[0.14em] uppercase text-muted-foreground">
+                {project.category}
+              </p>
+              <h3 className="mt-1 text-item font-semibold text-foreground transition-opacity group-hover:opacity-70">
+                {project.title}
+              </h3>
+            </button>
           </article>
         ))}
       </div>
+
+      <ProjectDialog project={selected} onOpenChange={(open) => !open && setSelected(null)} />
     </div>
   );
 }
