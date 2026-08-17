@@ -44,7 +44,7 @@ export const projects: Project[] = [
     title: "Brand Identity Design",
     category: "Design Gráfico",
     image:
-      "https://images.unsplash.com/photo-1572044162444-ad60f128bde7?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
   },
   {
     title: "App Interface Mobile",
