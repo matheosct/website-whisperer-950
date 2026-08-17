@@ -16,9 +16,9 @@ export type TimelineEntry = {
 
 export const profile = {
   name: "Matheus Costa",
-  role: "Designer Gráfico & de Produto",
+  role: "Product Designer · UX/UI",
   summary:
-    "Designer gráfico e de produto com atuação em UX/UI, infografia e comunicação visual institucional.",
+    "Product designer focado em UX/UI: pesquisa, arquitetura de informação, design systems e interfaces de produtos digitais.",
   location: "Rio de Janeiro, Brasil",
   links: [
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" as const },
@@ -28,8 +28,8 @@ export const profile = {
 };
 
 export const about = [
-  "Mais de 6 anos de experiência em design gráfico e de produto, atuando em projetos de saúde pública, educação, moda e governo. Trabalho na interseção entre estética e funcionalidade, com foco em clareza da informação.",
-  "Rotina baseada em pesquisa, prototipagem e refinamento, em colaboração com equipes multidisciplinares de pesquisa, desenvolvimento e gestão.",
+  "Mais de 6 anos projetando produtos digitais — web e mobile — em saúde pública, educação, governo e e-commerce. Atuo do problema à entrega: pesquisa com usuários, fluxos, wireframes, protótipos e interface final.",
+  "Trabalho orientado a evidências e a design systems escaláveis, em colaboração diária com pesquisa, engenharia e gestão de produto, acompanhando a implementação e a evolução das interfaces.",
 ];
 
 export const skills: Skill[] = [
