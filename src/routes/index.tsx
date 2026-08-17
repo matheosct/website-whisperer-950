@@ -8,9 +8,9 @@ import { ThemeToggle } from "@/components/resume/ThemeToggle";
 import { TimelineList } from "@/components/resume/TimelineList";
 import { about, education, experience, profile } from "@/lib/resume-data";
 
-const title = `${profile.name} — Currículo de Designer Gráfico e de Produto`;
+const title = `${profile.name} — Product Designer & UX/UI Designer`;
 const description =
-  "Currículo online de designer gráfico e de produto: perfil, habilidades, projetos, formação acadêmica e experiência profissional.";
+  "Currículo online de product designer e UX/UI designer: perfil, habilidades, projetos de interface, formação acadêmica e experiência profissional.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -37,9 +37,9 @@ function Index() {
           <section className="mb-20">
             <SectionHeading index="01" title="Perfil" />
             <p className="text-lead font-medium text-foreground">
-              Designer com foco em <strong className="font-bold">infografia</strong>,{" "}
-              <strong className="font-bold">interfaces digitais</strong> e comunicação visual
-              institucional.
+              Product designer com foco em <strong className="font-bold">UX/UI</strong>,{" "}
+              <strong className="font-bold">design systems</strong> e produtos digitais orientados a
+              pesquisa.
             </p>
             <div className="mt-6 border-t border-border pt-6">
               {about.map((paragraph) => (

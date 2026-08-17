@@ -27,7 +27,7 @@ export function SidebarProfile() {
           <p className="mt-4 font-mono text-label tracking-[0.18em] uppercase text-muted-foreground">
             {profile.role}
           </p>
-          <div className="my-6 h-px w-10 bg-foreground/60" />
+          <div className="my-6 h-px w-full bg-border" />
           <p className="max-w-[26ch] text-body text-muted-foreground">
             {profile.summary}
           </p>
