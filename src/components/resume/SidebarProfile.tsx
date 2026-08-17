@@ -1,5 +1,6 @@
-import { Linkedin, Mail, Monitor } from "lucide-react";
+import { Linkedin, Mail, Monitor, User } from "lucide-react";
 
+import { AnimatedLogo } from "@/components/resume/AnimatedLogo";
 import { profile } from "@/lib/resume-data";
 
 const icons = {
@@ -13,10 +14,15 @@ export function SidebarProfile() {
     <aside className="border-b border-border px-6 py-10 md:sticky md:top-0 md:h-screen md:w-[320px] md:shrink-0 md:overflow-y-auto md:border-r md:border-b-0 md:px-10 md:py-14 lg:w-[360px]">
       <div className="flex h-full flex-col">
         <div>
-          <h1 className="text-name font-medium tracking-tight text-foreground">
-            {profile.name.split(" ")[0]}
-            <br />
-            <span className="font-bold">{profile.name.split(" ").slice(1).join(" ")}.</span>
+          <div className="mb-8 h-24 w-24 overflow-hidden rounded-full border border-border bg-muted md:h-28 md:w-28">
+            <div className="flex h-full w-full items-center justify-center">
+              <User className="h-7 w-7 text-muted-foreground" aria-hidden />
+              <span className="sr-only">Espaço reservado para a foto de perfil</span>
+            </div>
+          </div>
+
+          <h1>
+            <AnimatedLogo />
           </h1>
           <p className="mt-4 font-mono text-label tracking-[0.18em] uppercase text-muted-foreground">
             {profile.role}
