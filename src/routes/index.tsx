@@ -1,24 +1,76 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+import { ProjectsCarousel } from "@/components/resume/ProjectsCarousel";
+import { SectionHeading } from "@/components/resume/SectionHeading";
+import { SidebarProfile } from "@/components/resume/SidebarProfile";
+import { SkillsRow } from "@/components/resume/SkillsRow";
+import { ThemeToggle } from "@/components/resume/ThemeToggle";
+import { TimelineList } from "@/components/resume/TimelineList";
+import { about, education, experience, profile } from "@/lib/resume-data";
+
+const title = `${profile.name} — Currículo de Designer Gráfico e de Produto`;
+const description =
+  "Currículo online de designer gráfico e de produto: perfil, habilidades, projetos, formação acadêmica e experiência profissional.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title },
+      { name: "description", content: description },
+      { property: "og:title", content: title },
+      { property: "og:description", content: description },
+      { property: "og:type", content: "profile" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground md:flex">
+      <ThemeToggle />
+      <SidebarProfile />
+
+      <main className="flex-1 px-6 py-12 md:px-14 md:py-16 lg:px-20">
+        <div className="max-w-3xl">
+          <section className="mb-20">
+            <SectionHeading index="01" title="Perfil" />
+            <p className="text-lead font-medium text-foreground">
+              Designer com foco em <strong className="font-bold">infografia</strong>,{" "}
+              <strong className="font-bold">interfaces digitais</strong> e comunicação visual
+              institucional.
+            </p>
+            <div className="mt-6 border-t border-border pt-6">
+              {about.map((paragraph) => (
+                <p key={paragraph} className="mb-3 text-body text-muted-foreground last:mb-0">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+          </section>
+
+          <section className="mb-20">
+            <SectionHeading index="02" title="Habilidades" />
+            <SkillsRow />
+          </section>
+
+          <section className="mb-20">
+            <SectionHeading index="03" title="Projetos" />
+            <ProjectsCarousel />
+          </section>
+
+          <section className="mb-20">
+            <SectionHeading index="04" title="Formação" />
+            <TimelineList entries={education} />
+          </section>
+
+          <section>
+            <SectionHeading index="05" title="Experiência" />
+            <TimelineList entries={experience} />
+          </section>
+        </div>
+      </main>
     </div>
   );
 }
