@@ -52,24 +52,113 @@ export const projects: Project[] = [
     category: "UI · Design System",
     image:
       "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800",
+    tags: ["Design System", "UI", "Figma", "Documentação"],
+    summary:
+      "Criação de uma biblioteca de componentes e tokens para unificar interfaces de produtos web e mobile de um mesmo ecossistema.",
+    blocks: [
+      {
+        type: "text",
+        content:
+          "O projeto começou com uma auditoria de interface: mapeamento de componentes duplicados, inconsistências de espaçamento, tipografia e cor entre as aplicações existentes.",
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&q=80&w=1200",
+        alt: "Grade de componentes de interface e tokens de cor",
+        caption: "Inventário de componentes e definição dos tokens base.",
+      },
+      {
+        type: "text",
+        content:
+          "A biblioteca foi estruturada em tokens (cor, tipografia, espaçamento e raio), componentes base e padrões compostos, documentados em Figma com regras de uso, estados e acessibilidade.",
+      },
+      {
+        type: "text",
+        content:
+          "Resultado: menos retrabalho entre design e desenvolvimento e um vocabulário visual consistente para novas telas.",
+      },
+    ],
   },
   {
     title: "App Mobile de Saúde",
     category: "UX/UI · Mobile",
     image:
       "https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&fit=crop&q=80&w=800",
+    tags: ["Mobile", "UX/UI", "Saúde pública", "Protótipo"],
+    summary:
+      "Aplicativo para acompanhamento de pacientes e registro de dados em campo por equipes de saúde.",
+    blocks: [
+      {
+        type: "text",
+        content:
+          "A concepção partiu de entrevistas com profissionais de campo, que precisavam registrar informações com pouco tempo, sob luz solar direta e conexão instável.",
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=1200",
+        alt: "Telas de aplicativo mobile exibidas em um smartphone",
+        caption: "Fluxo de registro simplificado, com alto contraste.",
+      },
+      {
+        type: "text",
+        content:
+          "O fluxo principal foi reduzido a quatro etapas, com salvamento local e sincronização posterior. A interface prioriza alvos de toque grandes, contraste elevado e leitura rápida.",
+      },
+    ],
   },
   {
     title: "Pesquisa e Fluxos de Usuário",
     category: "UX Research",
     image:
       "https://images.unsplash.com/photo-1544928147-79a2dbc1f389?auto=format&fit=crop&q=80&w=800",
+    tags: ["Pesquisa", "Entrevistas", "Jornada", "Wireframes"],
+    summary:
+      "Estudo qualitativo para entender pontos de atrito em um produto existente e redesenhar seus fluxos críticos.",
+    blocks: [
+      {
+        type: "text",
+        content:
+          "Foram conduzidas entrevistas em profundidade e testes de usabilidade moderados, sintetizados em mapas de jornada e uma matriz de oportunidades priorizada com o time de produto.",
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+        alt: "Quadro com anotações e post-its de síntese de pesquisa",
+        caption: "Síntese das entrevistas e priorização de oportunidades.",
+      },
+      {
+        type: "text",
+        content:
+          "A partir das evidências, os fluxos críticos foram redesenhados em wireframes de baixa fidelidade e validados em nova rodada de testes antes da interface final.",
+      },
+    ],
   },
   {
     title: "Dashboard de Dados",
     category: "Product Design · Web",
     image:
       "https://images.unsplash.com/photo-1551288049-bbda6465f74a?auto=format&fit=crop&q=80&w=800",
+    tags: ["Dataviz", "Web", "Arquitetura de informação"],
+    summary:
+      "Painel de indicadores para acompanhamento de metas e desempenho operacional em tempo quase real.",
+    blocks: [
+      {
+        type: "text",
+        content:
+          "O desafio era exibir um grande volume de indicadores sem sobrecarregar a leitura. A solução organizou a informação em camadas: visão geral, comparativos e detalhamento por recorte.",
+      },
+      {
+        type: "image",
+        src: "https://images.unsplash.com/photo-1543286386-713bdd548da4?auto=format&fit=crop&q=80&w=1200",
+        alt: "Gráficos e indicadores em um painel de dados",
+        caption: "Hierarquia visual entre indicadores primários e secundários.",
+      },
+      {
+        type: "text",
+        content:
+          "A escolha dos gráficos seguiu o tipo de comparação de cada métrica, com paleta neutra e uso pontual de cor para destacar desvios relevantes.",
+      },
+    ],
   },
 ];
 
