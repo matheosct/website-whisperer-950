@@ -44,7 +44,12 @@ export const skills: Skill[] = [
   { name: "Illustrator" },
   { name: "InDesign" },
   { name: "Figma" },
+  { name: "Python" },
+  { name: "SQL" },
+  { name: "ChatGPT" },
+  { name: "Lovable" },
 ];
+
 
 export const projects: Project[] = [
   {

@@ -1,4 +1,13 @@
-import { Figma, Image, Layers, PenTool } from "lucide-react";
+import {
+  Bot,
+  CodeXml,
+  Database,
+  Figma,
+  Image,
+  Layers,
+  PenTool,
+  Sparkles,
+} from "lucide-react";
 
 import { skills } from "@/lib/resume-data";
 
@@ -7,7 +16,12 @@ const icons: Record<string, typeof Figma> = {
   Illustrator: PenTool,
   InDesign: Layers,
   Figma: Figma,
+  Python: CodeXml,
+  SQL: Database,
+  ChatGPT: Bot,
+  Lovable: Sparkles,
 };
+
 
 export function SkillsRow() {
   return (
